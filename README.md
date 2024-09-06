@@ -3,6 +3,11 @@
 ## Introduction
 
 This repository contains the installation instructions for the RS485 CAN HAT produced by Eneltec.
+Clone this repository with
+
+```
+git clone https://github.com/ENELTEC/PiZero-Industrial.git .industrial
+```
 
 # Install
 
