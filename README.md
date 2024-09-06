@@ -10,7 +10,7 @@ You can run ```sudo sh install.sh ``` or follow the steps:
 
 ## The shell via serial port must be disabled.
 
-```sudo raspi-config``` > ```Interface Options``` > ```Serial Port``` > <No>
+```sudo raspi-config``` > ```Interface Options``` > ```Serial Port``` > ```No```
 
 ## CAN
 1. Copie o seguinte texto para o arquivo em ``` /boot/firmware/config.txt``` (```/boot/config.txt``` para versões mais antigas do Raspbian)
