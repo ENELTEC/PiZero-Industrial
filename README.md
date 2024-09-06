@@ -1,19 +1,20 @@
 # PiZero Industrial
 
-## Introdução
+## Introduction
 
-Este repositório contem as instruções de instalação dos arquivos e bibliotecas para utilização do RS485 CAN HAT produzido pela Eneltec.
+This repository contains the installation instructions for the RS485 CAN HAT produced by Eneltec.
 
-# Instalação
+# Install
+
+ATENTION: The shell via serial port must be disabled.
 
 You can run ```sudo sh install.sh ``` or follow the steps:
 
-## The shell via serial port must be disabled.
 
 ```sudo raspi-config``` > ```Interface Options``` > ```Serial Port``` > ```No```
 
 ## CAN
-1. Copie o seguinte texto para o arquivo em ``` /boot/firmware/config.txt``` (```/boot/config.txt``` para versões mais antigas do Raspbian)
+1. Copy the following text to the file at ``` /boot/firmware/config.txt``` (```/boot/config.txt``` for older versions of Raspbian)
 
 ```
 dtoverlay=mcp2515-can0,oscillator=8000000,interrupt=12
@@ -21,8 +22,7 @@ dtoverlay=spi-bcm2835-overlay
 
 ```
 
-2. Para utilização do módulo CAN, usaremos a bibilioteca can-utils (https://elinux.org/Can-utils).
-Instale utilizando o comando:
+2. To use the CAN module, we will use the can-utils library (https://elinux.org/Can-utils). Install it using the command:
 
 ``` 
 sudo apt-get install can-utils 
@@ -31,20 +31,20 @@ sudo apt-get install can-utils
 
 3.  Reboot.
 
-4. Ative a interface com:
+4. Activate the interface with:
 
 ```
 sudo ip link set can0 up type can bitrate 125000
 
 ```
 
-5. Para enviar um frame utilizando a interface:
+5. To send a frame with the interface:
 ```
 cansend can0 123#AAAA1010AAAA1010
 
 ```
 
-Para realizar a leitura:
+To read:
 
 ```
 candump can0
