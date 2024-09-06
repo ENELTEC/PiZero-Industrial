@@ -6,7 +6,11 @@ This repository contains the installation instructions for the RS485 CAN HAT pro
 Clone this repository with
 
 ```
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt install git -y
 git clone https://github.com/ENELTEC/PiZero-Industrial.git .industrial
+
 ```
 
 # Install
