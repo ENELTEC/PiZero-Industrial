@@ -9,7 +9,7 @@ Clone this repository with
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt install git -y
-git clone https://github.com/ENELTEC/PiZero-Industrial.git .industrial
+git clone https://github.com/ENELTEC/PiZero-Industrial.git industrial
 
 ```
 
@@ -66,26 +66,26 @@ candump can0
 1. Set up respository and virtual environment:
 
 ```
-sudo chmod +x .industrial/modbus.py
-sudo python3 -m venv .industrial/.venv
+sudo chmod +x industrial/modbus.py
+sudo python3 -m venv industrial/.venv
 ```
 
 2. Download the requeriments.
 
 ```
-sudo .industrial/.venv/bin/pip install .industrial/requeriments.txt
+sudo industrial/.venv/bin/pip install industrial/requeriments.txt
 ```
 or
 
 ```
-sudo .industrial/.venv/bin/pip install pyserial==3.5
-sudo .industrial/.venv/bin/pip install pymodbus==3.7.2
+sudo industrial/.venv/bin/pip install pyserial==3.5
+sudo industrial/.venv/bin/pip install pymodbus==3.7.2
 ```
 
 3. Create an alias and reaload the source file: 
 
 ```
-echo alias modbus="'/home/eneltec/.industrial/.venv/bin/python3 /home/eneltec/.industrial/modbus.py'" | sudo tee -a ~/.bashrc
+echo alias modbus="'/home/eneltec/industrial/.venv/bin/python3 /home/eneltec/industrial/modbus.py'" | sudo tee -a ~/.bashrc
 source ~/.bashrc
 ```
 
