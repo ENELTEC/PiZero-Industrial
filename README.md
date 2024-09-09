@@ -13,14 +13,22 @@ git clone https://github.com/ENELTEC/PiZero-Industrial.git industrial
 
 ```
 
+ATENTION: The shell via serial port must be disabled.
+```sudo raspi-config``` > ```Interface Options``` > ```Serial Port```
+
+```Would you like a login shell to be accessible over serial? > No```
+
+```Would you like the serial port hardware to be enabled? > Yes```
+
 # Install
 
-ATENTION: The shell via serial port must be disabled.
 
-You can run ```sudo sh install.sh ``` or follow the steps:
-
-
-```sudo raspi-config``` > ```Interface Options``` > ```Serial Port``` > ```No```
+You can run 
+```
+sudo chmod +x industrial/install.sh
+sudo sh industrial/install.sh
+```
+or follow the steps:
 
 ## CAN
 1. Copy the following text to the file at ``` /boot/firmware/config.txt``` (```/boot/config.txt``` for older versions of Raspbian)
