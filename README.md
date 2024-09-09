@@ -22,16 +22,8 @@ ATENTION: The shell via serial port must be disabled.
 
 # Install
 
-
-You can run 
-```
-sudo chmod +x industrial/install.sh
-sudo sh industrial/install.sh
-```
-or follow the steps:
-
 ## CAN
-1. Copy the following text to the file at ``` /boot/firmware/config.txt``` (```/boot/config.txt``` for older versions of Raspbian)
+1. Copy the following text to the end of the file at ``` /boot/firmware/config.txt``` (```/boot/config.txt``` for older versions of Raspbian)
 
 ```
 dtoverlay=mcp2515-can0,oscillator=8000000,interrupt=12
@@ -78,7 +70,7 @@ sudo chmod +x industrial/modbus.py
 sudo python3 -m venv industrial/.venv
 ```
 
-2. Download the requeriments.
+2. Download the requeriments into the virtual environment.
 
 ```
 sudo industrial/.venv/bin/pip install industrial/requeriments.txt
